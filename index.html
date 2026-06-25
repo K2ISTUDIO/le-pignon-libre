@@ -646,12 +646,8 @@
 <nav class="nav" id="mainNav" aria-label="Navigation principale">
   <div class="container nav__inner">
     <a class="nav__logo" href="#accueil" aria-label="Retour en haut — Le Pignon Libre">
-      <img src="image/logo.png" alt="Logo Le Pignon Libre" width="40" height="40"
-           style="width:40px;height:40px;object-fit:contain;filter:invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(.9)" />
-      <div>
-        <div style="letter-spacing:.02em">Le Pignon Libre</div>
-        <div style="font-size:.65rem;font-weight:400;color:var(--grey);letter-spacing:.08em;text-transform:uppercase">Atelier Vélo · Pantin</div>
-      </div>
+      <img src="image/logo.png" alt="Logo Le Pignon Libre" width="44" height="44"
+           style="width:44px;height:44px;object-fit:contain;filter:invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(.9)" />
     </a>
 
     <ul class="nav__links" role="list">
@@ -685,9 +681,9 @@
 </nav>
 
 <!-- ══ ACCUEIL ══ -->
-<section id="accueil" style="min-height:100svh;display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden">
+<section id="accueil" style="min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:var(--nav-h);position:relative;overflow:hidden">
   <div class="hero__bg" aria-hidden="true"></div>
-  <div class="container" style="padding-top:2rem;padding-bottom:2rem;width:100%">
+  <div class="container" style="padding-top:3rem;padding-bottom:3rem;width:100%">
     <div class="hero__grid">
       <div>
         <div class="hero__eyebrow" aria-hidden="true">
@@ -742,28 +738,28 @@
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Gallery strip -->
-  <div style="position:absolute;bottom:0;left:0;right:0" aria-label="Photos de l'atelier">
-    <div class="gallery-strip__track" style="padding-inline:clamp(1.25rem,5vw,3rem);padding-block:.75rem">
-      <div class="gallery-item" style="width:clamp(140px,18vw,200px);aspect-ratio:3/4">
-        <img src="image/stand-roue.jpg" alt="Vélo sur pied d'atelier" loading="lazy" />
-      </div>
-      <div class="gallery-item" style="width:clamp(140px,18vw,200px);aspect-ratio:3/4">
-        <img src="image/mecano-travail.jpg" alt="Mécanicien à l'établi" loading="lazy" />
-      </div>
-      <div class="gallery-item" style="width:clamp(140px,18vw,200px);aspect-ratio:3/4">
-        <img src="image/reparation-roue.jpg" alt="Réparation d'une roue" loading="lazy" />
-      </div>
-      <div class="gallery-item" style="width:clamp(140px,18vw,200px);aspect-ratio:3/4">
-        <img src="image/atelier-outils.jpg" alt="Tableau d'outils" loading="lazy" />
-      </div>
-      <div class="gallery-item" style="width:clamp(140px,18vw,200px);aspect-ratio:3/4">
-        <img src="image/reparation-cassette.jpg" alt="Travail sur cassette" loading="lazy" />
-      </div>
+<!-- Gallery strip (hors hero, flux normal) -->
+<div style="background:var(--black);padding-block:1.5rem;border-top:1px solid var(--border)" aria-label="Photos de l'atelier">
+  <div class="gallery-strip__track" style="padding-inline:clamp(1.25rem,5vw,3rem)">
+    <div class="gallery-item" style="width:clamp(160px,20vw,240px)">
+      <img src="image/stand-roue.jpg" alt="Vélo sur pied d'atelier" loading="lazy" />
+    </div>
+    <div class="gallery-item" style="width:clamp(160px,20vw,240px)">
+      <img src="image/mecano-travail.jpg" alt="Mécanicien à l'établi" loading="lazy" />
+    </div>
+    <div class="gallery-item" style="width:clamp(160px,20vw,240px)">
+      <img src="image/reparation-roue.jpg" alt="Réparation d'une roue" loading="lazy" />
+    </div>
+    <div class="gallery-item" style="width:clamp(160px,20vw,240px)">
+      <img src="image/atelier-outils.jpg" alt="Tableau d'outils" loading="lazy" />
+    </div>
+    <div class="gallery-item" style="width:clamp(160px,20vw,240px)">
+      <img src="image/reparation-cassette.jpg" alt="Travail sur cassette" loading="lazy" />
     </div>
   </div>
-</section>
+</div>
 
 <!-- ══ À PROPOS ══ -->
 <section id="apropos" class="section" style="background:var(--dark)">
