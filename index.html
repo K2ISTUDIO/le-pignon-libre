@@ -692,9 +692,43 @@
     }
 
     /* ── Pages ── */
-    .page-section { display: none; }
-    .page-section.active { display: block; }
-    #accueil.page-section.active { display: flex; }
+    .page-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    .page-section.active {
+      display: block;
+      animation: fadeInUp 320ms ease forwards;
+    }
+    #accueil.page-section.active {
+      display: flex;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Nav active indicator ── */
+    .nav__links a.active {
+      color: var(--white);
+    }
+    .nav__links a.active::after {
+      transform: scaleX(1);
+    }
+
+    /* ── Page transition overlay ── */
+    .page-curtain {
+      position: fixed;
+      inset: 0;
+      background: var(--black);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 200;
+      transition: opacity 150ms ease;
+    }
+    .page-curtain.flash {
+      opacity: .18;
+    }
   </style>
 </head>
 <body>
@@ -703,13 +737,7 @@
 <nav class="nav scrolled" id="mainNav" aria-label="Navigation principale">
   <div class="container nav__inner">
     <div class="nav__logo" onclick="showPage('accueil')" role="link" tabindex="0" aria-label="Accueil Le Pignon Libre">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-        <circle cx="10" cy="24" r="7.5" stroke="#D4AF37" stroke-width="1.5"/>
-        <circle cx="26" cy="24" r="7.5" stroke="#D4AF37" stroke-width="1.5"/>
-        <path d="M10 24L18 10L26 24" stroke="#D4AF37" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M14 17H22" stroke="#D4AF37" stroke-width="1.5"/>
-        <circle cx="18" cy="10" r="2" fill="#D4AF37"/>
-      </svg>
+      <img src="image/logo.png" alt="Logo Le Pignon Libre" width="40" height="40" style="width:40px;height:40px;object-fit:contain;filter:invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(.9);border-radius:4px" />
       <div>
         <div style="letter-spacing:.02em">Le Pignon Libre</div>
         <div style="font-size:.65rem;font-weight:400;color:var(--grey);letter-spacing:.08em;text-transform:uppercase">Atelier Vélo · Pantin</div>
@@ -1184,16 +1212,26 @@
   </div>
 </footer>
 
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
+
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
 <script>
   function showPage(id) {
-    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-    const target = document.getElementById(id);
-    if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-    document.querySelectorAll('[data-page]').forEach(a => a.classList.toggle('active', a.dataset.page === id));
+    const curtain = document.getElementById('pageCurtain');
+    curtain.classList.add('flash');
+    setTimeout(() => {
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.add('active');
+        window.scrollTo({ top: 0 });
+      }
+      document.querySelectorAll('[data-page]').forEach(a => a.classList.toggle('active', a.dataset.page === id));
+      curtain.classList.remove('flash');
+    }, 150);
     return false;
   }
 
