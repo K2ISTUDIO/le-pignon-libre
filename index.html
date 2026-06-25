@@ -950,113 +950,142 @@
 <!-- ══ CONTACT ══ -->
 <section id="contact" class="section" style="background:var(--dark)">
   <div class="container">
-    <div style="max-width:560px;margin-bottom:3.5rem">
+
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:3rem">
       <div class="badge">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Nous trouver
       </div>
       <h2 class="section-title">Passez nous <span class="gold italic">voir</span></h2>
-      <p class="section-subtitle">À l'atelier ou en ligne — on est là pour vous aider.</p>
+      <p class="section-subtitle" style="margin-inline:auto">À l'atelier ou en ligne — on est là pour vous aider.</p>
     </div>
 
-    <div class="contact-grid">
-      <!-- Infos -->
-      <div>
-        <div class="contact-info__items" role="list">
-          <div class="contact-item" role="listitem">
-            <div class="contact-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 7 7l.75-.75a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.28z"/></svg></div>
-            <div><div class="contact-item__label">Téléphone</div><div class="contact-item__val"><a href="tel:0766515421">07 66 51 54 21</a></div></div>
-          </div>
-          <div class="contact-item" role="listitem">
-            <div class="contact-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div><div class="contact-item__label">E-mail</div><div class="contact-item__val"><a href="mailto:lepignonlibre@gmail.com">lepignonlibre@gmail.com</a></div></div>
-          </div>
-          <div class="contact-item" role="listitem">
-            <div class="contact-item__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="contact-item__label">Adresse</div><div class="contact-item__val">178 avenue Jean Lolive<br/>93500 Pantin</div></div>
-          </div>
-        </div>
+    <!-- 4 info cards -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem">
 
-        <div class="hours-strip">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <div><strong>Horaires d'ouverture</strong><br/><span>Lundi – Samedi &nbsp;·&nbsp; 10h00 – 19h00</span></div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.6rem">
+        <div style="width:38px;height:38px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2);border-radius:8px;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 7 7l.75-.75a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.28z"/></svg>
         </div>
+        <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--grey)">Téléphone</div>
+        <a href="tel:0766515421" style="font-size:.9rem;color:var(--white);font-weight:500;transition:color 200ms" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white)'">07 66 51 54 21</a>
+      </div>
 
-        <div class="contact-social">
-          <a class="social-btn" href="https://www.instagram.com/le_pignon_libre?igsh=YngwNDlnMHdoYXpu&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Le Pignon Libre">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            Instagram
-          </a>
-          <a class="social-btn" href="mailto:lepignonlibre@gmail.com">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email
-          </a>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.6rem">
+        <div style="width:38px;height:38px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2);border-radius:8px;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
+        <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--grey)">E-mail</div>
+        <a href="mailto:lepignonlibre@gmail.com" style="font-size:.85rem;color:var(--white);font-weight:500;transition:color 200ms;word-break:break-all" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--white)'">lepignonlibre@gmail.com</a>
+      </div>
 
-        <div style="margin-top:1.5rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3">
-          <img src="image/founders.jpg" alt="Les deux fondateurs devant la boutique" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center" />
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.6rem">
+        <div style="width:38px;height:38px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2);border-radius:8px;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
+        <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--grey)">Adresse</div>
+        <span style="font-size:.9rem;color:var(--white);font-weight:500;line-height:1.4">178 av. Jean Lolive<br/>93500 Pantin</span>
+      </div>
 
-        <div class="map-wrapper">
+      <div style="background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.2);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.6rem">
+        <div style="width:38px;height:38px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);border-radius:8px;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--grey)">Horaires</div>
+        <span style="font-size:.9rem;color:var(--white);font-weight:500;line-height:1.4">Lun–Sam<br/>10h00 – 19h00</span>
+      </div>
+
+    </div>
+
+    <!-- Main 2-col grid -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:stretch">
+
+      <!-- Colonne gauche : photo + map -->
+      <div style="display:flex;flex-direction:column;gap:1.25rem">
+        <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);flex:1;min-height:220px">
+          <img src="image/founders.jpg" alt="Les deux fondateurs devant la boutique" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block" />
+        </div>
+        <div style="border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);height:220px">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.218!2d2.4078!3d48.8952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s178+Avenue+Jean+Lolive%2C+93500+Pantin!5e0!3m2!1sfr!2sfr!4v1"
-            title="Carte — 178 avenue Jean Lolive 93500 Pantin"
+            title="Carte — 178 avenue Jean Lolive 93500 Pantin" width="100%" height="100%"
+            style="filter:invert(90%) hue-rotate(180deg) brightness(.85) contrast(1.1);display:block"
             loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
 
-      <!-- Boutons de contact -->
-      <div class="contact-form" style="display:flex;flex-direction:column;justify-content:center;gap:1.5rem">
-        <div>
-          <h3 style="margin-bottom:.5rem">Contactez-nous directement</h3>
-          <p style="font-size:.9375rem;color:var(--grey);line-height:1.7">Choisissez le moyen qui vous convient — on vous répond rapidement.</p>
-        </div>
+      <!-- Colonne droite : actions + Instagram -->
+      <div style="display:flex;flex-direction:column;gap:1.25rem">
 
+        <!-- WhatsApp -->
         <a href="https://wa.me/33766515421" target="_blank" rel="noopener noreferrer"
-           style="display:flex;align-items:center;gap:1.25rem;background:#0d1f13;border:1.5px solid #25D366;border-radius:var(--radius);padding:1.25rem 1.5rem;transition:all 200ms ease;cursor:pointer"
-           onmouseover="this.style.background='#122b1a';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(37,211,102,.2)'"
-           onmouseout="this.style.background='#0d1f13';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-          <div style="width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+           style="display:flex;align-items:center;gap:1.25rem;background:#0a1a0e;border:1.5px solid #25D366;border-radius:var(--radius);padding:1.5rem;flex:1;transition:all 200ms ease"
+           onmouseover="this.style.background='#0f2414';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(37,211,102,.18)'"
+           onmouseout="this.style.background='#0a1a0e';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.855L.057 23.886a.5.5 0 0 0 .609.61l6.098-1.597A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.796 9.796 0 0 1-5.031-1.388l-.36-.214-3.733.978.995-3.642-.234-.374A9.796 9.796 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
             </svg>
           </div>
-          <div>
-            <div style="font-size:1rem;font-weight:600;color:#25D366;margin-bottom:.2rem">WhatsApp</div>
-            <div style="font-size:.875rem;color:var(--grey-lt)">07 66 51 54 21</div>
-            <div style="font-size:.8rem;color:var(--grey);margin-top:.15rem">Réponse rapide — 10h à 19h</div>
+          <div style="flex:1">
+            <div style="font-size:1.05rem;font-weight:700;color:#25D366;margin-bottom:.25rem">WhatsApp</div>
+            <div style="font-size:.9rem;color:var(--white)">07 66 51 54 21</div>
+            <div style="font-size:.8rem;color:var(--grey);margin-top:.2rem">Réponse rapide · 10h–19h</div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" style="margin-left:auto;flex-shrink:0" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
+        <!-- Gmail -->
         <a href="mailto:lepignonlibre@gmail.com"
-           style="display:flex;align-items:center;gap:1.25rem;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;transition:all 200ms ease;cursor:pointer"
-           onmouseover="this.style.borderColor='rgba(212,175,55,.5)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(212,175,55,.1)'"
+           style="display:flex;align-items:center;gap:1.25rem;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.5rem;flex:1;transition:all 200ms ease"
+           onmouseover="this.style.borderColor='rgba(212,175,55,.45)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(212,175,55,.1)'"
            onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
-          <div style="width:52px;height:52px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
+          <div style="width:56px;height:56px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div style="flex:1">
+            <div style="font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.25rem">E-mail</div>
+            <div style="font-size:.875rem;color:var(--grey-lt)">lepignonlibre@gmail.com</div>
+            <div style="font-size:.8rem;color:var(--grey);margin-top:.2rem">Réponse sous 24h</div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/le_pignon_libre?igsh=YngwNDlnMHdoYXpu&utm_source=qr" target="_blank" rel="noopener noreferrer"
+           style="display:flex;align-items:center;gap:1.25rem;background:var(--card);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.5rem;flex:1;transition:all 200ms ease"
+           onmouseover="this.style.borderColor='rgba(200,100,200,.4)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(200,100,200,.1)'"
+           onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(193,53,132,.15),rgba(253,186,53,.1));border:1px solid rgba(193,53,132,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#iggrad)" stroke-width="2" aria-hidden="true">
+              <defs><linearGradient id="iggrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#e6683c"/><stop offset="100%" stop-color="#c1356c"/></linearGradient></defs>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </div>
-          <div>
-            <div style="font-size:1rem;font-weight:600;color:var(--white);margin-bottom:.2rem">E-mail</div>
-            <div style="font-size:.875rem;color:var(--grey-lt)">lepignonlibre@gmail.com</div>
-            <div style="font-size:.8rem;color:var(--grey);margin-top:.15rem">Réponse sous 24h</div>
+          <div style="flex:1">
+            <div style="font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:.25rem">Instagram</div>
+            <div style="font-size:.875rem;color:var(--grey-lt)">@le_pignon_libre</div>
+            <div style="font-size:.8rem;color:var(--grey);margin-top:.2rem">Suivez notre actualité</div>
           </div>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" style="margin-left:auto;flex-shrink:0" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--grey)" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
-        <div style="background:rgba(212,175,55,.04);border:1px solid rgba(212,175,55,.12);border-radius:var(--radius);padding:1rem 1.25rem;display:flex;align-items:center;gap:.75rem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <p style="font-size:.8375rem;color:var(--grey)">Ouvert <strong style="color:var(--white)">Lun–Sam · 10h–19h</strong> — venez directement à l'atelier !</p>
-        </div>
       </div>
     </div>
+
   </div>
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    #contact .info-cards { grid-template-columns: repeat(2,1fr) !important; }
+    #contact .main-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
 
 <!-- ══ FOOTER ══ -->
 <footer>
